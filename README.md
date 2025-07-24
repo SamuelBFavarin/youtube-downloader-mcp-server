@@ -1,4 +1,4 @@
-# YouTube Downloader MCP Server
+# YouTube Downloader MCP Server 📺
 
 This project is an **MCP (Multi-Channel Protocol) server** that allows you (or Claude, or any MCP-compatible AI agent) to download YouTube videos directly to your computer's Downloads folder. It is designed for seamless integration with Claude's tool-calling capabilities.
 
@@ -80,12 +80,8 @@ Running YouTube Downloader MCP server
 
    
 3. **Example workflow:**
-   - Ask Claude: "Download this YouTube video: https://www.youtube.com/watch?v=XXXX"
-   - Claude will call `download_youtube_video` and give you a `download_id`.
-   - ![Claude YouTube Download Demo](assets/download.png)
-   - Ask: "Check the status of my download."
-   - Claude will call `check_download_status` with the `download_id` and report the status.
-   - ![Claude YouTube Check Status Demo](assets/status.png)
+![Claude YouTube Download Demo](assets/download.png)
+![Claude YouTube Check Status Demo](assets/status.png)
 
 
 ## Running Tests
