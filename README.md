@@ -1,13 +1,13 @@
 # YouTube Downloader MCP Server 📺
 
-This project is an **MCP (Multi-Channel Protocol) server** that allows you (or Claude, or any MCP-compatible AI agent) to download YouTube videos directly to your computer's Downloads folder. It is designed for seamless integration with Claude's tool-calling capabilities.
+This project is an **MCP (Multi-Channel Protocol) server** that allows Claude (or any MCP-compatible AI agent) to download YouTube videos directly to your computer's Downloads folder. It is designed for seamless integration with Claude's tool-calling capabilities.
 
 ## Features
 - Exposes two MCP tools:
   - `download_youtube_video(url: str)`: Starts a YouTube video download in the background and returns a download ID.
   - `check_download_status(download_id: str)`: Lets you check the status of a download (in progress, completed, or error).
 - Downloads are saved to your system's Downloads folder.
-- Fully async/background operation—no need to wait for downloads to finish.
+- Fully async/background operation.
 
 ## Installation
 
@@ -27,23 +27,12 @@ This project is an **MCP (Multi-Channel Protocol) server** that allows you (or C
    poetry install
    ```
 
-4. **(Optional) Activate the Poetry shell:**
-   ```sh
-   poetry shell
-   ```
-
 ## Running the MCP Server
 
 Run the server using Poetry:
 
 ```sh
 poetry run python endpoints.py
-```
-
-Or, if you are in a Poetry shell:
-
-```sh
-python endpoints.py
 ```
 
 You should see a message like:
@@ -90,12 +79,6 @@ To run the unit tests for the YoutubeDownloader service, use:
 
 ```sh
 poetry run python -m unittest tests/test_services.py
-```
-
-Or to run all tests in the tests/ directory:
-
-```sh
-poetry run python -m unittest discover tests
 ```
 
 All tests are located in the `tests/` directory. These tests use mocks, so no real downloads or system calls are made.
